@@ -1,10 +1,6 @@
-# Auto detect text files and perform LF normalization
-# text=auto
-
-# Apply SQL language detection to all .sql files
-*.sql linguist-detectable=true
-*.sql linguist-language=SQL
-
-# Override all files to be recognized as SQL
-* linguist-detectable=true
-* linguist-language=SQL
+*.tar.gpg linguist-detectable=true
+*.tar.gpg linguist-language=SQL
+*.zip.gpg linguist-detectable=true
+*.zip.gpg linguist-language=SQL
+*.txt linguist-detectable=true
+*.txt linguist-language=SQL
