@@ -1,4 +1,7 @@
 2724649a25d0d2eee6b48487b524bec8fc4a2843b1082cb21697d0185a860ffd  C:/Users/rshat/Documents/Coding/MongoDB/CRUD in MongoDB.tar.gpg
+801fb9494b1cbde08b88a1221225200a73882b73cfb98d5949b6252d5bd5be0e  C:/Users/rshat/Documents/Coding/MongoDB/Data Indexing and Authentication.tar.gpg
+a2b2e23c289c5257c809a9f611e26c4041e785ccc69393a14e3572b1bcc63171  C:/Users/rshat/Documents/Coding/MongoDB/Datasets.tar.gpg
 861c585cdcc6fed705f1330d966ebb12791dc38852745bec49a2806f16448a48  C:/Users/rshat/Documents/Coding/MongoDB/Intro to MongoDB.tar.gpg
 d423cbae07c24f0ec6b8d95f5d6666119149549fe5b91838cf3e93cf26c57d38  C:/Users/rshat/Documents/Coding/MongoDB/MongoDB.zip.gpg
 20c16a93db2e9e372d3cfb9df55622a61586a8f2f6525d25108f656eb3eb6abb  C:/Users/rshat/Documents/Coding/MongoDB/README.md
+6d3c6d365c1bd855166d90e3109d36a1dfcb72d62d0983945af8831a47201bc8  C:/Users/rshat/Documents/Coding/MongoDB/sha256sum.txt
