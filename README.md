@@ -7,7 +7,6 @@
 <br></p>
 <hr>
 
-
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: User-ID:	ryanshatch <404@SHA-256.io>
