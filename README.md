@@ -5,6 +5,7 @@
 <p align="center">
 <i>This is a kind remember to always verify and double check the validity of a program before installing anything, via the given fingerprints and SHA256 Checksums are <b>ALWAYS</b> supposed to match.</i>
 <br></p>
+<hr>
 <!--
 <p align="center"><li><b>public key:</b> <code>-----BEGIN PGP PUBLIC KEY BLOCK-----
 --><!--
