@@ -1,6 +1,7 @@
 6dd85661e8b145b355420bbf68e8f21adefc8bf8bce0d75b66a63fe31740617e  Content_2.7z.001.gpg.sig
 f0889d462e2119aed160057735656c90c12dd6c1d450e3d0dc59a6220a5bf86e  Content_2.7z.002.gpg.sig
 776220665c60d34478833284be08c7edaca34dad594ec317bb31607a1dc4685f  Content_2.7z.003.gpg.sig
+c6644d52c1efc61c66db5ec6ec056897adce3f42414353284b783c30062cc523  Create and Read Using Python.tar.gpg.sig
 06e752e6b626d4918114545baf4e781392900aa0cd6088e3bd06bf083b9a3579  CRUD in MongoDB.tar.gpg.sig
 6cc28856fa7c0d7808b4567bebadc5e901157404e96852639ef5a96df4f52de9  Data Indexing and Authentication.tar.gpg.sig
 7ec84c6336c81812194655e910c7913fe828007b36f49be5ece0abd4ac2816fa  Intro to MongoDB.tar.gpg.sig
