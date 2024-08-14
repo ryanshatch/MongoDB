@@ -1,6 +1,9 @@
 *.tar.gpg linguist-detectable=true
-*.tar.gpg linguist-language=SQL
+*.tar.gpg linguist-language=txt
 *.zip.gpg linguist-detectable=true
-*.zip.gpg linguist-language=SQL
+*.zip.gpg linguist-language=txt
 *.txt linguist-detectable=true
-*.txt linguist-language=SQL
+*.txt linguist-language=txt
+*.sig linguist-detectable=true
+*.sig linguist-languate=SQL
+*.md linguist-languate=SQL
