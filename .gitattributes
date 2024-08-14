@@ -5,5 +5,6 @@
 *.txt linguist-detectable=true
 *.txt linguist-language=txt
 *.sig linguist-detectable=true
-*.sig linguist-languate=SQL
-*.md linguist-languate=SQL
+*.sig linguist-language=SQL
+*.md linguist-detectable=true
+*.md linguist-language=SQL
