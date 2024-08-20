@@ -1,4 +1,121 @@
-## Querys and Terminal Outputs:
+<hr>
+
+<h2><b>MongoDB Dashboard GUI   |  Austin Animal Center Outcomes</b><br><br></h2>
+
+The MongoDB Dashboard is a web application developed to support the organization in managing and analyzing data related to animal shelters and rescue operations. 
+<br>
+> `Austin Animal Center's 2020 Outcomes` was used to build this applications database.<br> 
+
+This Dashboard helps the users to be able to interact with data stored in the MongoDB. It also helps to visualize the queries and parsed data by using data filtering, pie charts, and geolocation mapping.
+<br>
+All built on the Dash framework, the GUI was designed to be easy for the user to use, maintain, and even add more functionality and develop ontop of the current programs GUI Dashboard.
+
+<!-- --- -->
+<hr>
+
+### 1. **Core Functionality**
+
+- **Interactive Data Table**: Users can `view, filter, and interact with data` from the MongoDB database within a dynamic table format.
+- **Geolocation Mapping**: The dashboard features `a map that shows the location` of a selected animal that is based on the data that is shown in the table.<br>
+  > Water Rescue, Mountain Rescue, Disaster, or Individual Tracking.
+- **Data Visualization**: `A pie chart` that dynamically updates based on the filtered or selected data, and displays the distribution of the animal breeds with percentages.
+
+### **GUI Interaction Examples:**
+
+- [Screenshot 1: Water Rescue](Water_Rescue.JPG)
+- [Screenshot 2: Mountain or Wilderness Rescue](Mountain_or_Wilderness_Rescue.JPG)
+- [Screenshot 3: Disaster or Individual Tracking](Individual_Tracking_to_Find_A_Black_Lab.JPG)
+- [Screenshot 4: Reset all to unfiltered](GUI.JPG)
+
+<!-- --- -->
+<hr>
+
+### 2. **Tools Used and Justification**
+
+#### **1. MongoDB:**
+   - **Why MongoDB?**
+     - MongoDB was chosen for its flexibility and scalability as the data model for this project. Its document-based NoSQL structure is very effective for parsing through large amounts of semi-structured data, which worked flawlessly for managing the animal records in this project. MongoDB also can be powerful when utilizing other languages to help parse data. For example, with Python you can fluently integrate the MongoDB connections by using the PyMongo library. This design allowed for not only a very efficient and flexible data model with tailored operations and functions, but also a very easy method to connect graphically to the data using the Dash framework.
+   - **Key Features:**
+     - **Flexible Schema**: MongoDB's schema-less design helps to easily add and modify fields without the need for any complex migrations.
+     - **Aggregation Framework**: MongoDB's aggregation pipeline supports advanced data analysis directly within the database, which reduces the need for any additional data processing in Python.
+
+#### **2. Dash Framework:**
+   - **Why Dash?**
+     - Dash was picked for building the web application because it works well when intigrated with Python, making it easier to create data-driven web apps with less time spent coding and development. It also handles the structure for both the view and controller parts of the app, using helpful components like `html`, `dcc`, and `dash_table` that make adding interactive features more straightforward.
+   - **Key Features:**
+     - **Python Integration**: Dash helps developers to build entire applications using only Python, which in turn gets rid of the need for many additional frontend languages like JavaScript.
+     - **Component Library**: Dash offers a fairly rich library full of pre-built components like graphs, tables, and maps- all of which are easy to customize.
+     - **Reactivity**: Dash's callback system supports automatic updates to the web application in response to users inputs or any data changes.
+
+#### **3. Additional Tools:**
+   - **Pandas**: I used Pandas for handling and transforming data. It provided me with powerful structures like DataFrames, which in turn helped to make it much easier to filter, sort, and adjust the data.
+   - **Plotly**: This was integrated with Dash to create interactive and dynamic charts, like the pie chart used in this project.
+   - **Dash Leaflet**: This tool added geo-location mapping functionality, which added an interactive map that displays right within the GUI/ Dash application.
+   - **JupyterDash**: Using JupyterDash made it easier to develop the dashboard within a Jupyter notebook, which in the end was very helpful to streamline the process of iteration and testing.
+
+<!-- --- -->
+<hr>
+
+### 3. **Project Steps**
+
+1. **Data Import and Database Setup**:
+   - Imported animal data into MongoDB using the `mongoimport` tool.
+   - Developed the CRUD module and configured the `AnimalShelter` class to interact with MongoDB which holds the methods for reading, parsing, and querying the data.
+
+2. **Dashboard Development**:
+   - Designed the dashboard layout using Dash components, including the data table, pie chart, and map.
+   - Developed callback functions to handle user inputs and dynamically update the data table, pie chart, and map accordingly.
+
+3. **Testing and Debugging**:
+   - Tested the dashboard to make sure that all components function correctly, which included data filtering, chart updates, and the map rendering.
+   - Resolved issues related to data visualization, making sure that the pie chart displays data clearly for the user by adding more priority to the styling and layout of the components used in the graphical user interface.
+
+4. **Deployment**:
+   - The last step was to redeploy the dashboard and run a final test to double check that everything was working as I expected. I checked the performance of the application, along with its MongoDB integration and the graphical outputs, to make sure everything functioned smoothly in the production environment. 
+      > *Note:* verifying that the dashboard fully utilized the CRUD functions from my Python module was critical for the final deployment to be fully functional.
+
+<!-- --- -->
+<hr>
+
+### 4. **Challenges and Solutions**
+
+1. **Pie Chart Display Issues**:
+   - **Challenge**: The pie chart initially appeared cluttered, with extremely small sections and overlapping labels. It also had a 3D blur effect for any of the animals that were not in the top 5 breeds which made it hard to read and understand the data in the chart.
+   - **Solution**: I carefully adjusted the chart size and label font size using Plotly’s layout options, and used the `fig.update_traces` and `fig.update_layout` methods to enhance the pie chart’s readability. 
+     > *Note:* Subtle or simple changes to the UI always make a big difference on the final result.
+
+2. **Database Connection Errors**:
+   - **Challenge**: I experienced connection issues with MongoDB, especially during the early development stages in the Apporto environment.
+   - **Solution**: Verified that the MongoDB server was running and accessible, and double checked the users and the permissions to make sure that the connection was properly configured. I ended up re-adding the user 'aacuser' and gave it the correct permissions to the 'AAC' database, which resolved the connection issues.
+
+3. **Data Filtering Logic**:
+   - **Challenge**: It was fairly complicated to correctly implement the data filtering logic to dynamically update the data table, pie chart, and map based on user inputs.
+   - **Solution**: I used MongoDB’s aggregation framework to run advanced queries, allowing the dashboard to filter data based on the criteria selected by users.
+
+<!-- --- -->
+<hr>
+
+### 5. **Resources**
+
+#### **Data For Database:**
+- **Data Set: Austin Animal Center Outcomes Spreadsheet**: [aac_shelter_outcomes.csv](aac_shelter_outcomes.csv)
+  <!-- - Reference: Austin Animal Center. (2020). Austin Animal Center Outcomes [Data set]. City of Austin, Texas Open Data Portal. https://doi.org/10.26000/025.000001 -->
+  ---
+#### **Python Guides:**
+- **Head First Python**: [https://go.oreilly.com/SNHU/library/view/head-first-python/9781491919521/](https://go.oreilly.com/SNHU/library/view/head-first-python/9781491919521/)
+- **Style Guide for Python Code**: [https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/)
+  <!---->
+  ---
+#### **Documentation:**
+- **MongoDB Documentation**: [https://docs.mongodb.com/](https://docs.mongodb.com/)
+- **Dash Documentation**: [https://dash.plotly.com/](https://dash.plotly.com/)
+- **Plotly Documentation**: [https://plotly.com/python/](https://plotly.com/python/)
+- **PyMongo Documentation**: [https://pymongo.readthedocs.io/](https://pymongo.readthedocs.io/)
+
+<!-- --- -->
+<hr>
+
+## Queries and Terminal Outputs For Data Indexing and Authentication For New User:
 
 ```bash
 (base) ryanhatch_snhu@nv-snhu8-l01:~$ mongosh
