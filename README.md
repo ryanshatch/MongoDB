@@ -144,13 +144,16 @@ city     10.50 MiB
 config  108.00 KiB
 enron     7.55 MiB
 local    72.00 KiB
-test> db.animals.createIndex({ breed: 1 });
+test> use AAC
+switched to db AAC
+AAC>
+AAC> db.animals.createIndex({ breed: 1 });
 breed_1
-test> db.animals.find({ breed: "Labrador Retriever" }).explain("executionStats");
+AAC> db.animals.find({ breed: "Labrador Retriever" }).explain("executionStats");
 {
   explainVersion: '1',
   queryPlanner: {
-    namespace: 'test.animals',
+    namespace: 'AAC.animals',
     indexFilterSet: false,
     parsedQuery: { breed: { '$eq': 'Labrador Retriever' } },
     queryHash: '17252B62',
@@ -226,7 +229,7 @@ test> db.animals.find({ breed: "Labrador Retriever" }).explain("executionStats")
   command: {
     find: 'animals',
     filter: { breed: 'Labrador Retriever' },
-    '$db': 'test'
+    '$db': 'AAC'
   },
   serverInfo: {
     host: 'csdev-mongodb-85dc8bbc87-j9nrm',
@@ -246,15 +249,15 @@ test> db.animals.find({ breed: "Labrador Retriever" }).explain("executionStats")
   },
   ok: 1
 }
-test> 
+AAC> 
 
-test> db.animals.createIndex({ breed: 1, outcome_type: 1 });
+AAC> db.animals.createIndex({ breed: 1, outcome_type: 1 });
 breed_1_outcome_type_1
-test> db.animals.find({ breed: "Labrador Retriever", outcome_type: "Transfer" }).explain("executionStats");
+AAC> db.animals.find({ breed: "Labrador Retriever", outcome_type: "Transfer" }).explain("executionStats");
 {
   explainVersion: '1',
   queryPlanner: {
-    namespace: 'test.animals',
+    namespace: 'AAC.animals',
     indexFilterSet: false,
     parsedQuery: {
       '$and': [
@@ -357,7 +360,7 @@ test> db.animals.find({ breed: "Labrador Retriever", outcome_type: "Transfer" })
   command: {
     find: 'animals',
     filter: { breed: 'Labrador Retriever', outcome_type: 'Transfer' },
-    '$db': 'test'
+    '$db': 'AAC'
   },
   serverInfo: {
     host: 'csdev-mongodb-85dc8bbc87-j9nrm',
@@ -377,15 +380,15 @@ test> db.animals.find({ breed: "Labrador Retriever", outcome_type: "Transfer" })
   },
   ok: 1
 }
-test> clear
+AAC> clear
 ReferenceError: clear is not defined
-test> 
+AAC> 
 
-test> 
+AAC> 
 
-test> 
+AAC> 
 
-test> use admin
+AAC> use admin
 switched to db admin
 admin> db.createUser({
 ...   user: "aacuser",
@@ -393,7 +396,7 @@ admin> db.createUser({
 ...   roles: [{ role: "readWrite", db: "AAC" }]
 ... })
 { ok: 1 }
-admin> 
+admin> exit
 (base) ryanhatch_snhu@nv-snhu8-l01:~$ export MONGO_USER="aacuser"
 export MONGO_PASS="aaN5N2WuMYe-DAQeAsiIWEeZUmNRi0bN_BEgm1luiymMwqkPAbPZxc-Oz37Am97lUCX92jP9e9xtaPErKsK35HthXvAIlbIbFpX1VBG-2GqK9uD4MBH-jU_u6gkUUu65GHdaj_yZF03J43zMwmS7sTBktWdXbMTX_EbHllZJEW7Om10C2IkOj9wwogZDjioFMq4f-mvxcJQyjkT-_E6V5Ng-3ZH0wA3y45"
 echo $MONGO_USER
@@ -407,8 +410,10 @@ Using MongoDB:		6.0.13
 Using Mongosh:		1.8.0
 
 For mongosh info see: https://docs.mongodb.com/mongodb-shell/
-
-test> db.runCommand({connectionStatus: 1})
+------
+test> use AAC
+switched to db AAC
+AAC> db.runCommand({connectionStatus: 1})
 {
   authInfo: {
     authenticatedUsers: [ { user: 'aacuser', db: 'admin' } ],
@@ -416,7 +421,7 @@ test> db.runCommand({connectionStatus: 1})
   },
   ok: 1
 }
-test>
+AAC>
 ```
 
 <hr>
