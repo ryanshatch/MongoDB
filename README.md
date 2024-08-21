@@ -119,7 +119,7 @@ All built on the Dash framework, the GUI was designed to be easy for the user to
 <!-- --- -->
 <hr>
 
-## Queries and Terminal Outputs For Data Indexing and Authentication For New User:
+### **Queries and Terminal Outputs For Data Indexing and Authentication For New User:**
 
 ```bash
 (base) ryanhatch_snhu@nv-snhu8-l01:~$ mongosh
