@@ -26,7 +26,7 @@ All built on the Dash framework, the GUI was designed to be easy for the user to
 
 ### **GUI Interaction Examples:**
 
-- [Screenshot 1: Water Rescue]([Water_Rescue.JPG](https://github.com/ryanshatch/MongoDB/blob/main/Images%20and%20Outputs/Water_Rescue.JPG)
+- [Screenshot 1: Water Rescue](https://github.com/ryanshatch/MongoDB/blob/main/Images%20and%20Outputs/Water_Rescue.JPG)
 - [Screenshot 2: Mountain or Wilderness Rescue](https://github.com/ryanshatch/MongoDB/blob/main/Images%20and%20Outputs/Mountain_or_Wilderness_Rescue.JPG)
 - [Screenshot 3: Disaster or Individual Tracking](https://github.com/ryanshatch/MongoDB/blob/main/Images%20and%20Outputs/Individual_Tracking_to_Find_A_Black_Lab.JPG)
 - [Screenshot 4: Reset all to unfiltered](https://github.com/ryanshatch/MongoDB/blob/main/Images%20and%20Outputs/GUI.JPG)
