@@ -5,7 +5,12 @@
 <hr>
 
 <p>The MongoDB Dashboard is a web application developed to support the organization in managing and analyzing data related to animal shelters and rescue operations.</p>
-<p><strong>Austin Animal Center's 2020 Outcomes</strong> was used to build this application's database.</p>
+
+<blockquote>The data from the `Austin Animal Centers Outcomes For 2020` was used to build the AAC database.</blockquote>
+<!-- <br> -->
+
+---
+
 
 <p>This Dashboard helps the users to be able to interact with data stored in the MongoDB. It also helps to visualize the queries and parsed data by using data filtering, pie charts, and geolocation mapping.
 <br>
@@ -19,7 +24,8 @@ All built on the Dash framework, the GUI was designed to be easy for the user to
 <ul>
     <li><strong>Interactive Data Table</strong>: Users can <code>view, filter, and interact with data</code> from the MongoDB database within a dynamic table format.</li>
     <li><strong>Geolocation Mapping</strong>: The dashboard features <code>a map that shows the location</code> of a selected animal based on the data shown in the table.
-    <br>Water Rescue, Mountain Rescue, Disaster, or Individual Tracking.</li>
+    <br>
+    <blockquote>Water Rescue, Mountain Rescue, Disaster, or Individual Tracking.<blockquote></li>
     <li><strong>Data Visualization</strong>: <code>A pie chart</code> that dynamically updates based on the filtered or selected data, displaying the distribution of the animal breeds with percentages.</li>
 </ul>
 <p align="center">
@@ -97,6 +103,7 @@ All built on the Dash framework, the GUI was designed to be easy for the user to
     <li><strong>Deployment:</strong></li>
     <ul>
         <li>The last step was to redeploy the dashboard and run a final test to double-check that everything was working as expected. I checked the performance of the application, along with its MongoDB integration and the graphical outputs, to make sure everything functioned smoothly in the production environment.</li>
+        <blockquote><i><b>Note: verifying that the dashboard fully utilized the CRUD functions from my Python module was critical for the final deployment to be fully functional.</i></b></blockquote>
     </ul>
 </ol>
 
@@ -109,6 +116,7 @@ All built on the Dash framework, the GUI was designed to be easy for the user to
     <ul>
         <li><strong>Challenge:</strong> The pie chart initially appeared cluttered, with extremely small sections and overlapping labels. It also had a 3D blur effect for any of the animals that were not in the top 5 breeds, making it hard to read and understand the data in the chart.</li>
         <li><strong>Solution:</strong> I carefully adjusted the chart size and label font size using Plotly’s layout options, and used the <code>fig.update_traces</code> and <code>fig.update_layout</code> methods to enhance the pie chart’s readability.</li>
+        <blockquote><i><b>Note: Subtle or simple changes to the UI always make a big difference on the final result.</i></b><blockquote>
     </ul>
     <li><strong>Database Connection Errors:</strong></li>
     <ul>
