@@ -1,6 +1,7 @@
 <hr>
 
-<h2><b>MongoDB Dashboard GUI   |  Austin Animal Center Outcomes</b><br><br></h2>
+<h2><b>MongoDB Dashboard GUI
+> Austin Animal Center Outcomes</b><br><br></h2>
 
 The MongoDB Dashboard is a web application developed to support the organization in managing and analyzing data related to animal shelters and rescue operations. 
 <br>
