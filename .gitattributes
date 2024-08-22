@@ -8,3 +8,4 @@
 *.sig linguist-language=SQL
 *.md linguist-detectable=true
 *.md linguist-language=SQL
+*.html linguist-language=SQL
