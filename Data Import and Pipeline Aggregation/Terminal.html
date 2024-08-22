@@ -1,0 +1,678 @@
+<pre>(base) <font color="#26A269"><b>ryanhatch_snhu@nv-snhu8-l01</b></font>:<font color="#12488B"><b>~</b></font>$ mongoimport --host nv-desktop-services.apporto.com --port 31692 --username root --password 86FmoAzWpZ --authenticationDatabase admin --db companies --collection research --file /usr/local/datasets/companies.json
+2024-08-21T07:49:20.215+0000	connected to: mongodb://nv-desktop-services.apporto.com:31692/
+2024-08-21T07:49:23.167+0000	18801 document(s) imported successfully. 0 document(s) failed to import.
+(base) <font color="#26A269"><b>ryanhatch_snhu@nv-snhu8-l01</b></font>:<font color="#12488B"><b>~</b></font>$ 
+</pre>
+<pre>(base) <font color="#26A269"><b>ryanhatch_snhu@nv-snhu8-l01</b></font>:<font color="#12488B"><b>~</b></font>$ mongosh
+    Current Mongosh Log ID:	66c5a00ed1ca0085acd7e08f
+    Connecting to:		<font color="#26A269"><b>mongodb://&lt;credentials&gt;@nv-desktop-services.apporto.com:31692/?directConnection=true&amp;appName=mongosh+1.8.0</b></font>
+    Using MongoDB:		6.0.13
+    <font color="#A2734C"><b>Using Mongosh</b></font>:		1.8.0
+    
+    For mongosh info see: <b>https://docs.mongodb.com/mongodb-shell/</b>
+    
+    <font color="#A2734C"><b>------</b></font>
+       <font color="#A2734C"><b>The server generated these startup warnings when booting</b></font>
+       2024-08-21T07:47:21.773+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+       2024-08-21T07:47:23.902+00:00: Failed to read /sys/kernel/mm/transparent_hugepage/defrag
+       2024-08-21T07:47:23.902+00:00: vm.max_map_count is too low
+    <font color="#A2734C"><b>------</b></font>
+    
+    test&gt; show dbs
+    <b>AAC</b>          5.54 MiB
+    <b>admin</b>      148.00 KiB
+    <b>city</b>        10.50 MiB
+    <b>companies</b>   31.11 MiB
+    <b>config</b>     108.00 KiB
+    <b>enron</b>        7.55 MiB
+    <b>local</b>       88.00 KiB
+    <b>test</b>        16.00 KiB
+    test&gt; use companies
+    switched to db companies
+    companies&gt; db.research.find({<font color="#26A269">&quot;name&quot;</font> : <font color="#26A269">&quot;AdventNet&quot;</font>})
+    [
+      {
+        _id: ObjectId(&quot;52cdef7c4bab8bd675297d8b&quot;),
+        name: <font color="#26A269">&apos;AdventNet&apos;</font>,
+        permalink: <font color="#26A269">&apos;abc3&apos;</font>,
+        crunchbase_url: <font color="#26A269">&apos;http://www.crunchbase.com/company/adventnet&apos;</font>,
+        homepage_url: <font color="#26A269">&apos;http://adventnet.com&apos;</font>,
+        blog_url: <font color="#26A269">&apos;&apos;</font>,
+        blog_feed_url: <font color="#26A269">&apos;&apos;</font>,
+        twitter_username: <font color="#26A269">&apos;manageengine&apos;</font>,
+        category_code: <font color="#26A269">&apos;enterprise&apos;</font>,
+        number_of_employees: <font color="#A2734C">600</font>,
+        founded_year: <font color="#A2734C">1996</font>,
+        deadpooled_year: <font color="#A2734C">2</font>,
+        tag_list: <font color="#26A269">&apos;&apos;</font>,
+        alias_list: <font color="#26A269">&apos;Zoho ManageEngine &apos;</font>,
+        email_address: <font color="#26A269">&apos;pr@adventnet.com&apos;</font>,
+        phone_number: <font color="#26A269">&apos;925-924-9500&apos;</font>,
+        description: <font color="#26A269">&apos;Server Management Software&apos;</font>,
+        created_at: ISODate(&quot;2007-05-25T19:24:22.000Z&quot;),
+        updated_at: <font color="#26A269">&apos;Wed Oct 31 18:26:09 UTC 2012&apos;</font>,
+        overview: <font color="#26A269">&apos;&lt;p&gt;AdventNet is now &lt;a href=&quot;/company/zoho-manageengine&quot; title=&quot;Zoho ManageEngine&quot; rel=&quot;nofollow&quot;&gt;Zoho ManageEngine&lt;/a&gt;.&lt;/p&gt;\n&apos;</font> +
+          <font color="#26A269">&apos;\n&apos;</font> +
+          <font color="#26A269">&apos;&lt;p&gt;Founded in 1996, AdventNet has served a diverse range of enterprise IT, networking and telecom customers.&lt;/p&gt;\n&apos;</font> +
+          <font color="#26A269">&apos;\n&apos;</font> +
+          <font color="#26A269">&apos;&lt;p&gt;AdventNet supplies server and network management software.&lt;/p&gt;&apos;</font>,
+        image: {
+          available_sizes: [
+            [
+              [ <font color="#A2734C">150</font>, <font color="#A2734C">55</font> ],
+              <font color="#26A269">&apos;assets/images/resized/0001/9732/19732v1-max-150x150.png&apos;</font>
+            ],
+            [
+              [ <font color="#A2734C">150</font>, <font color="#A2734C">55</font> ],
+              <font color="#26A269">&apos;assets/images/resized/0001/9732/19732v1-max-250x250.png&apos;</font>
+            ],
+            [
+              [ <font color="#A2734C">150</font>, <font color="#A2734C">55</font> ],
+              <font color="#26A269">&apos;assets/images/resized/0001/9732/19732v1-max-450x450.png&apos;</font>
+            ]
+          ]
+        },
+        products: [],
+        relationships: [
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;CEO and Co-Founder&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Sridhar&apos;</font>,
+              last_name: <font color="#26A269">&apos;Vembu&apos;</font>,
+              permalink: <font color="#26A269">&apos;sridhar-vembu&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;VP of Business Dev&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Neil&apos;</font>,
+              last_name: <font color="#26A269">&apos;Butani&apos;</font>,
+              permalink: <font color="#26A269">&apos;neil-butani&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;Usabiliy Engineer&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Bharath&apos;</font>,
+              last_name: <font color="#26A269">&apos;Balasubramanian&apos;</font>,
+              permalink: <font color="#26A269">&apos;bharath-balasibramanian&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;Director of Engineering&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Rajendran&apos;</font>,
+              last_name: <font color="#26A269">&apos;Dandapani&apos;</font>,
+              permalink: <font color="#26A269">&apos;rajendran-dandapani&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;Market Analyst&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Aravind&apos;</font>,
+              last_name: <font color="#26A269">&apos;Natarajan&apos;</font>,
+              permalink: <font color="#26A269">&apos;aravind-natarajan&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;Director of Product Management&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Hyther&apos;</font>,
+              last_name: <font color="#26A269">&apos;Nizam&apos;</font>,
+              permalink: <font color="#26A269">&apos;hyther-nizam&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;Western Regional OEM Sales Manager&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Ian&apos;</font>,
+              last_name: <font color="#26A269">&apos;Wenig&apos;</font>,
+              permalink: <font color="#26A269">&apos;ian-wenig&apos;</font>
+            }
+          }
+        ],
+        competitions: [],
+        providerships: [
+          {
+            title: <font color="#26A269">&apos;DHFH&apos;</font>,
+            is_past: <font color="#A2734C">true</font>,
+            provider: { name: <font color="#26A269">&apos;A Small Orange&apos;</font>, permalink: <font color="#26A269">&apos;a-small-orange&apos;</font> }
+          }
+        ],
+        total_money_raised: <font color="#26A269">&apos;$0&apos;</font>,
+        funding_rounds: [],
+        investments: [],
+        acquisition: <b>null</b>,
+        acquisitions: [],
+        offices: [
+          {
+            description: <font color="#26A269">&apos;Headquarters&apos;</font>,
+            address1: <font color="#26A269">&apos;4900 Hopyard Rd.&apos;</font>,
+            address2: <font color="#26A269">&apos;Suite 310&apos;</font>,
+            zip_code: <font color="#26A269">&apos;94588&apos;</font>,
+            city: <font color="#26A269">&apos;Pleasanton&apos;</font>,
+            state_code: <font color="#26A269">&apos;CA&apos;</font>,
+            country_code: <font color="#26A269">&apos;USA&apos;</font>,
+            latitude: <font color="#A2734C">37.692934</font>,
+            longitude: <font color="#A2734C">-121.904945</font>
+          }
+        ],
+        milestones: [],
+        video_embeds: [],
+        screenshots: [
+          {
+            available_sizes: [
+              [
+                [ <font color="#A2734C">150</font>, <font color="#A2734C">94</font> ],
+                <font color="#26A269">&apos;assets/images/resized/0004/3400/43400v1-max-150x150.png&apos;</font>
+              ],
+              [
+                [ <font color="#A2734C">250</font>, <font color="#A2734C">156</font> ],
+                <font color="#26A269">&apos;assets/images/resized/0004/3400/43400v1-max-250x250.png&apos;</font>
+              ],
+              [
+                [ <font color="#A2734C">450</font>, <font color="#A2734C">282</font> ],
+                <font color="#26A269">&apos;assets/images/resized/0004/3400/43400v1-max-450x450.png&apos;</font>
+              ]
+            ],
+            attribution: <b>null</b>
+          }
+        ],
+        external_links: [],
+        partners: []
+      }
+    ]
+    companies&gt; db.research.find({<font color="#26A269">&quot;founded_year&quot;</font> : <font color="#A2734C">1996</font>}, {<font color="#26A269">&quot;name&quot;</font> : <font color="#A2734C">1</font>}).limit(<font color="#A2734C">10</font>)
+    [
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675297d8b&quot;), name: <font color="#26A269">&apos;AdventNet&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675297e24&quot;), name: <font color="#26A269">&apos;RegOnline&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675297e42&quot;), name: <font color="#26A269">&apos;LiveWorld&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675297f26&quot;), name: <font color="#26A269">&apos;Shopzilla&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675297fca&quot;), name: <font color="#26A269">&apos;LinkShare&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675298032&quot;), name: <font color="#26A269">&apos;MSNBC&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd6752980cf&quot;), name: <font color="#26A269">&apos;TheStreet&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd6752980d0&quot;), name: <font color="#26A269">&apos;Omniture&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd6752980df&quot;), name: <font color="#26A269">&apos;Blucora&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675298223&quot;), name: <font color="#26A269">&apos;Alexa&apos;</font> }
+    ]
+    companies&gt; db.research.find({<font color="#26A269">&quot;founded_year&quot;</font>: {<font color="#A2734C">$gt</font>: <font color="#A2734C">2010</font>}}, {<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>}).sort({<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>}).limit(<font color="#A2734C">20</font>)
+    [
+      { name: <font color="#26A269">&apos;4shared&apos;</font> },
+      { name: <font color="#26A269">&apos;Advaliant&apos;</font> },
+      { name: <font color="#26A269">&apos;Advisor&apos;</font> },
+      { name: <font color="#26A269">&apos;Baveo&apos;</font> },
+      { name: <font color="#26A269">&apos;Bling Easy&apos;</font> },
+      { name: <font color="#26A269">&apos;Carfeine&apos;</font> },
+      { name: <font color="#26A269">&apos;CircleUp&apos;</font> },
+      { name: <font color="#26A269">&apos;Clowdy&apos;</font> },
+      { name: <font color="#26A269">&apos;CompareChecker&apos;</font> },
+      { name: <font color="#26A269">&apos;Cyphercor&apos;</font> },
+      { name: <font color="#26A269">&apos;DocASAP&apos;</font> },
+      { name: <font color="#26A269">&apos;Easel&apos;</font> },
+      { name: <font color="#26A269">&apos;EasyBib&apos;</font> },
+      { name: <font color="#26A269">&apos;Emotive Communications&apos;</font> },
+      { name: <font color="#26A269">&apos;FAT Media&apos;</font> },
+      { name: <font color="#26A269">&apos;FamilyDen&apos;</font> },
+      { name: <font color="#26A269">&apos;FirstString&apos;</font> },
+      { name: <font color="#26A269">&apos;Fixya&apos;</font> },
+      { name: <font color="#26A269">&apos;Fliggo&apos;</font> },
+      { name: <font color="#26A269">&apos;Fluc&apos;</font> }
+    ]
+    Type &quot;it&quot; for more
+    companies&gt; db.research.find({<font color="#26A269">&quot;offices.state&quot;</font>: {<font color="#A2734C">$in</font>: [<font color="#26A269">&quot;California&quot;</font>, <font color="#26A269">&quot;Texas&quot;</font>]}}, {<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>})
+    
+    companies&gt;   .sort({<font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">-1</font>})
+    Invalid REPL keyword
+    companies&gt; db.research.find({<font color="#26A269">&quot;offices.state&quot;</font>: {<font color="#A2734C">$in</font>: [<font color="#26A269">&quot;California&quot;</font>, <font color="#26A269">&quot;Texas&quot;</font>]}}, {<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>}).sort({<font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">-1</font>}).limit(<font color="#A2734C">20</font>)
+    
+    companies&gt; db.research.find({<font color="#26A269">&quot;offices.state&quot;</font>: {<font color="#A2734C">$in</font>: [<font color="#26A269">&quot;California&quot;</font>, <font color="#26A269">&quot;Texas&quot;</font>]}}, {<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>}).sort({<font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">-1</font>}).limit(<font color="#A2734C">20</font>)
+    
+    companies&gt; db.research.find({<font color="#26A269">&quot;offices.state&quot;</font>: {<font color="#A2734C">$in</font>: [<font color="#26A269">&quot;California&quot;</font>, <font color="#26A269">&quot;Texas&quot;</font>]}}, {<font color="#26A269">&quot;offices.state&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>}).limit(<font color="#A2734C">5</font>)
+    
+    companies&gt; db.research.find({<font color="#26A269">&quot;offices.state_code&quot;</font>: {<font color="#A2734C">$in</font>: [<font color="#26A269">&quot;CA&quot;</font>, <font color="#26A269">&quot;TX&quot;</font>]}}, {<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>}).sort({<font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">-1</font>}).limit(<font color="#A2734C">20</font>)
+    [
+      { name: <font color="#26A269">&apos;PayPal&apos;</font>, number_of_employees: <font color="#A2734C">300000</font> },
+      { name: <font color="#26A269">&apos;Samsung Electronics&apos;</font>, number_of_employees: <font color="#A2734C">221726</font> },
+      { name: <font color="#26A269">&apos;Accenture&apos;</font>, number_of_employees: <font color="#A2734C">205000</font> },
+      { name: <font color="#26A269">&apos;Flextronics International&apos;</font>, number_of_employees: <font color="#A2734C">200000</font> },
+      { name: <font color="#26A269">&apos;Safeway&apos;</font>, number_of_employees: <font color="#A2734C">186000</font> },
+      { name: <font color="#26A269">&apos;Sony&apos;</font>, number_of_employees: <font color="#A2734C">180500</font> },
+      { name: <font color="#26A269">&apos;Intel&apos;</font>, number_of_employees: <font color="#A2734C">86300</font> },
+      { name: <font color="#26A269">&apos;Apple&apos;</font>, number_of_employees: <font color="#A2734C">80000</font> },
+      { name: <font color="#26A269">&apos;Dell&apos;</font>, number_of_employees: <font color="#A2734C">80000</font> },
+      { name: <font color="#26A269">&apos;ExxonMobil&apos;</font>, number_of_employees: <font color="#A2734C">76900</font> },
+      { name: <font color="#26A269">&apos;Affiliated Computer Services&apos;</font>, number_of_employees: <font color="#A2734C">74000</font> },
+      { name: <font color="#26A269">&apos;Cisco&apos;</font>, number_of_employees: <font color="#A2734C">63000</font> },
+      { name: <font color="#26A269">&apos;Sun Microsystems&apos;</font>, number_of_employees: <font color="#A2734C">33350</font> },
+      { name: <font color="#26A269">&apos;Texas Instruments&apos;</font>, number_of_employees: <font color="#A2734C">30175</font> },
+      { name: <font color="#26A269">&apos;Google&apos;</font>, number_of_employees: <font color="#A2734C">28000</font> },
+      { name: <font color="#26A269">&apos;The Walt Disney Company&apos;</font>, number_of_employees: <font color="#A2734C">25000</font> },
+      { name: <font color="#26A269">&apos;Avaya&apos;</font>, number_of_employees: <font color="#A2734C">18000</font> },
+      { name: <font color="#26A269">&apos;AMD&apos;</font>, number_of_employees: <font color="#A2734C">16420</font> },
+      { name: <font color="#26A269">&apos;Experian&apos;</font>, number_of_employees: <font color="#A2734C">15500</font> },
+      { name: <font color="#26A269">&apos;IQ Backoffice&apos;</font>, number_of_employees: <font color="#A2734C">15000</font> }
+    ]
+    Type &quot;it&quot; for more
+    companies&gt; db.research.aggregate([{ <font color="#A2734C">$unwind</font>: <font color="#26A269">&quot;$offices&quot;</font> }, { <font color="#A2734C">$match</font>: { <font color="#26A269">&quot;offices.country&quot;</font>: &quot;Unite<font color="#26A269">d States&quot;</font> } }, { <font color="#A2734C">$group</font>: { <font color="#A2734C">_id</font>: <font color="#26A269">&quot;$offices.state&quot;</font>, <font color="#A2734C">totalOffices</font>: { <font color="#A2734C">$sum</font>: <font color="#A2734C">1</font> } } }, { <font color="#A2734C">$sort</font>: { tota<font color="#A2734C">totalOffices</font>: <font color="#A2734C">-1</font> } }])
+    
+    companies&gt; db.research.aggregate([
+    ...   { <font color="#A2734C">$unwind</font>: <font color="#26A269">&quot;$offices&quot;</font> },
+    ...   { <font color="#A2734C">$match</font>: { <font color="#26A269">&quot;offices.country&quot;</font>: <font color="#26A269">&quot;United</font> <font color="#26A269">States&quot;</font> } },
+    ...   { <font color="#A2734C">$group</font>: { <font color="#A2734C">_id</font>: <font color="#26A269">&quot;$offices.state&quot;</font>, <font color="#A2734C">totalOffices</font>: { <font color="#A2734C">$sum</font>: <font color="#A2734C">1</font> } } },
+    ...   { <font color="#A2734C">$sort</font>: { <font color="#A2734C">totalOffices</font>: <font color="#A2734C">-1</font> } }
+    ... ])
+    
+    companies&gt; db.research.aggregate([
+    ...   { <font color="#A2734C">$unwind</font>: <font color="#26A269">&quot;$offices&quot;</font> },
+    ...   { <font color="#A2734C">$match</font>: { <font color="#26A269">&quot;offices.country&quot;</font>: <font color="#26A269">&quot;United</font> <font color="#26A269">States&quot;</font> } },
+    ...   { <font color="#A2734C">$group</font>: { <font color="#A2734C">_id</font>: <font color="#26A269">&quot;$offices.state&quot;</font>, <font color="#A2734C">totalOffices</font>: { <font color="#A2734C">$sum</font>: <font color="#A2734C">1</font> } } },
+    ...   { <font color="#A2734C">$sort</font>: { <font color="#A2734C">totalOffices</font>: <font color="#A2734C">-1</font> } }
+    ... ])
+    
+    companies&gt; db.research.find({ <font color="#26A269">&quot;offices.country&quot;</font>: <font color="#26A269">&quot;United States&quot;</font> }, { <font color="#26A269">&quot;offices.state&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font> }).limit(<font color="#A2734C">5</font>)
+    
+    companies&gt; db.research.findOne({}, { <font color="#A2734C">offices</font>: <font color="#A2734C">1</font>, <font color="#A2734C">_id</font>: <font color="#A2734C">0</font> })
+    {
+      offices: [
+        {
+          description: <font color="#26A269">&apos;Headquarters&apos;</font>,
+          address1: <font color="#26A269">&apos;4900 Hopyard Rd.&apos;</font>,
+          address2: <font color="#26A269">&apos;Suite 310&apos;</font>,
+          zip_code: <font color="#26A269">&apos;94588&apos;</font>,
+          city: <font color="#26A269">&apos;Pleasanton&apos;</font>,
+          state_code: <font color="#26A269">&apos;CA&apos;</font>,
+          country_code: <font color="#26A269">&apos;USA&apos;</font>,
+          latitude: <font color="#A2734C">37.692934</font>,
+          longitude: <font color="#A2734C">-121.904945</font>
+        }
+      ]
+    }
+    companies&gt; db.research.aggregate([
+    ...   { <font color="#A2734C">$unwind</font>: <font color="#26A269">&quot;$offices&quot;</font> },
+    ...   { <font color="#A2734C">$match</font>: { <font color="#26A269">&quot;offices.country_code&quot;</font>: <font color="#26A269">&quot;USA&quot;</font> } },
+    ...   { <font color="#A2734C">$group</font>: { <font color="#A2734C">_id</font>: <font color="#26A269">&quot;$offices.state_code&quot;</font>, <font color="#A2734C">totalOffices</font>: { <font color="#A2734C">$sum</font>: <font color="#A2734C">1</font> } } },
+    ...   { <font color="#A2734C">$sort</font>: { <font color="#A2734C">totalOffices</font>: <font color="#A2734C">-1</font> } }
+    ... ])
+    [
+      { _id: <font color="#26A269">&apos;CA&apos;</font>, totalOffices: <font color="#A2734C">3903</font> },
+      { _id: <font color="#26A269">&apos;NY&apos;</font>, totalOffices: <font color="#A2734C">1084</font> },
+      { _id: <font color="#26A269">&apos;MA&apos;</font>, totalOffices: <font color="#A2734C">623</font> },
+      { _id: <font color="#26A269">&apos;TX&apos;</font>, totalOffices: <font color="#A2734C">500</font> },
+      { _id: <font color="#26A269">&apos;WA&apos;</font>, totalOffices: <font color="#A2734C">415</font> },
+      { _id: <font color="#26A269">&apos;FL&apos;</font>, totalOffices: <font color="#A2734C">349</font> },
+      { _id: <font color="#26A269">&apos;IL&apos;</font>, totalOffices: <font color="#A2734C">308</font> },
+      { _id: <font color="#26A269">&apos;VA&apos;</font>, totalOffices: <font color="#A2734C">256</font> },
+      { _id: <b>null</b>, totalOffices: <font color="#A2734C">252</font> },
+      { _id: <font color="#26A269">&apos;CO&apos;</font>, totalOffices: <font color="#A2734C">224</font> },
+      { _id: <font color="#26A269">&apos;PA&apos;</font>, totalOffices: <font color="#A2734C">223</font> },
+      { _id: <font color="#26A269">&apos;GA&apos;</font>, totalOffices: <font color="#A2734C">206</font> },
+      { _id: <font color="#26A269">&apos;NJ&apos;</font>, totalOffices: <font color="#A2734C">204</font> },
+      { _id: <font color="#26A269">&apos;MD&apos;</font>, totalOffices: <font color="#A2734C">142</font> },
+      { _id: <font color="#26A269">&apos;NC&apos;</font>, totalOffices: <font color="#A2734C">138</font> },
+      { _id: <font color="#26A269">&apos;AZ&apos;</font>, totalOffices: <font color="#A2734C">135</font> },
+      { _id: <font color="#26A269">&apos;OR&apos;</font>, totalOffices: <font color="#A2734C">106</font> },
+      { _id: <font color="#26A269">&apos;MI&apos;</font>, totalOffices: <font color="#A2734C">100</font> },
+      { _id: <font color="#26A269">&apos;OH&apos;</font>, totalOffices: <font color="#A2734C">99</font> },
+      { _id: <font color="#26A269">&apos;MN&apos;</font>, totalOffices: <font color="#A2734C">95</font> }
+    ]
+    Type &quot;it&quot; for more
+    companies&gt; it
+    [
+      { _id: <font color="#26A269">&apos;UT&apos;</font>, totalOffices: <font color="#A2734C">82</font> },
+      { _id: <font color="#26A269">&apos;DC&apos;</font>, totalOffices: <font color="#A2734C">82</font> },
+      { _id: <font color="#26A269">&apos;CT&apos;</font>, totalOffices: <font color="#A2734C">67</font> },
+      { _id: <font color="#26A269">&apos;TN&apos;</font>, totalOffices: <font color="#A2734C">57</font> },
+      { _id: <font color="#26A269">&apos;MO&apos;</font>, totalOffices: <font color="#A2734C">55</font> },
+      { _id: <font color="#26A269">&apos;NV&apos;</font>, totalOffices: <font color="#A2734C">52</font> },
+      { _id: <font color="#26A269">&apos;WI&apos;</font>, totalOffices: <font color="#A2734C">47</font> },
+      { _id: <font color="#26A269">&apos;IN&apos;</font>, totalOffices: <font color="#A2734C">46</font> },
+      { _id: <font color="#26A269">&apos;NH&apos;</font>, totalOffices: <font color="#A2734C">41</font> },
+      { _id: <font color="#26A269">&apos;SC&apos;</font>, totalOffices: <font color="#A2734C">30</font> },
+      { _id: <font color="#26A269">&apos;NE&apos;</font>, totalOffices: <font color="#A2734C">28</font> },
+      { _id: <font color="#26A269">&apos;DE&apos;</font>, totalOffices: <font color="#A2734C">27</font> },
+      { _id: <font color="#26A269">&apos;KY&apos;</font>, totalOffices: <font color="#A2734C">27</font> },
+      { _id: <font color="#26A269">&apos;AL&apos;</font>, totalOffices: <font color="#A2734C">26</font> },
+      { _id: <font color="#26A269">&apos;KS&apos;</font>, totalOffices: <font color="#A2734C">24</font> },
+      { _id: <font color="#26A269">&apos;OK&apos;</font>, totalOffices: <font color="#A2734C">20</font> },
+      { _id: <font color="#26A269">&apos;IA&apos;</font>, totalOffices: <font color="#A2734C">18</font> },
+      { _id: <font color="#26A269">&apos;VT&apos;</font>, totalOffices: <font color="#A2734C">18</font> },
+      { _id: <font color="#26A269">&apos;NM&apos;</font>, totalOffices: <font color="#A2734C">18</font> },
+      { _id: <font color="#26A269">&apos;ME&apos;</font>, totalOffices: <font color="#A2734C">17</font> }
+    ]
+    Type &quot;it&quot; for more
+    companies&gt; db.research.aggregate([
+    ...   { <font color="#A2734C">$unwind</font>: <font color="#26A269">&quot;$offices&quot;</font> },
+    ...   { <font color="#A2734C">$match</font>: { <font color="#26A269">&quot;offices.country_code&quot;</font>: <font color="#26A269">&quot;USA&quot;</font> } },
+    ...   { <font color="#A2734C">$group</font>: { <font color="#A2734C">_id</font>: <font color="#26A269">&quot;$offices.state_code&quot;</font>, <font color="#A2734C">totalOffices</font>: { <font color="#A2734C">$sum</font>: <font color="#A2734C">1</font> } } },
+    ...   { <font color="#A2734C">$sort</font>: { <font color="#A2734C">totalOffices</font>: <font color="#A2734C">-1</font> } }
+    ... ]).toArray()
+    [
+      { _id: <font color="#26A269">&apos;CA&apos;</font>, totalOffices: <font color="#A2734C">3903</font> },
+      { _id: <font color="#26A269">&apos;NY&apos;</font>, totalOffices: <font color="#A2734C">1084</font> },
+      { _id: <font color="#26A269">&apos;MA&apos;</font>, totalOffices: <font color="#A2734C">623</font> },
+      { _id: <font color="#26A269">&apos;TX&apos;</font>, totalOffices: <font color="#A2734C">500</font> },
+      { _id: <font color="#26A269">&apos;WA&apos;</font>, totalOffices: <font color="#A2734C">415</font> },
+      { _id: <font color="#26A269">&apos;FL&apos;</font>, totalOffices: <font color="#A2734C">349</font> },
+      { _id: <font color="#26A269">&apos;IL&apos;</font>, totalOffices: <font color="#A2734C">308</font> },
+      { _id: <font color="#26A269">&apos;VA&apos;</font>, totalOffices: <font color="#A2734C">256</font> },
+      { _id: <b>null</b>, totalOffices: <font color="#A2734C">252</font> },
+      { _id: <font color="#26A269">&apos;CO&apos;</font>, totalOffices: <font color="#A2734C">224</font> },
+      { _id: <font color="#26A269">&apos;PA&apos;</font>, totalOffices: <font color="#A2734C">223</font> },
+      { _id: <font color="#26A269">&apos;GA&apos;</font>, totalOffices: <font color="#A2734C">206</font> },
+      { _id: <font color="#26A269">&apos;NJ&apos;</font>, totalOffices: <font color="#A2734C">204</font> },
+      { _id: <font color="#26A269">&apos;MD&apos;</font>, totalOffices: <font color="#A2734C">142</font> },
+      { _id: <font color="#26A269">&apos;NC&apos;</font>, totalOffices: <font color="#A2734C">138</font> },
+      { _id: <font color="#26A269">&apos;AZ&apos;</font>, totalOffices: <font color="#A2734C">135</font> },
+      { _id: <font color="#26A269">&apos;OR&apos;</font>, totalOffices: <font color="#A2734C">106</font> },
+      { _id: <font color="#26A269">&apos;MI&apos;</font>, totalOffices: <font color="#A2734C">100</font> },
+      { _id: <font color="#26A269">&apos;OH&apos;</font>, totalOffices: <font color="#A2734C">99</font> },
+      { _id: <font color="#26A269">&apos;MN&apos;</font>, totalOffices: <font color="#A2734C">95</font> },
+      { _id: <font color="#26A269">&apos;UT&apos;</font>, totalOffices: <font color="#A2734C">82</font> },
+      { _id: <font color="#26A269">&apos;DC&apos;</font>, totalOffices: <font color="#A2734C">82</font> },
+      { _id: <font color="#26A269">&apos;CT&apos;</font>, totalOffices: <font color="#A2734C">67</font> },
+      { _id: <font color="#26A269">&apos;TN&apos;</font>, totalOffices: <font color="#A2734C">57</font> },
+      { _id: <font color="#26A269">&apos;MO&apos;</font>, totalOffices: <font color="#A2734C">55</font> },
+      { _id: <font color="#26A269">&apos;NV&apos;</font>, totalOffices: <font color="#A2734C">52</font> },
+      { _id: <font color="#26A269">&apos;WI&apos;</font>, totalOffices: <font color="#A2734C">47</font> },
+      { _id: <font color="#26A269">&apos;IN&apos;</font>, totalOffices: <font color="#A2734C">46</font> },
+      { _id: <font color="#26A269">&apos;NH&apos;</font>, totalOffices: <font color="#A2734C">41</font> },
+      { _id: <font color="#26A269">&apos;SC&apos;</font>, totalOffices: <font color="#A2734C">30</font> },
+      { _id: <font color="#26A269">&apos;NE&apos;</font>, totalOffices: <font color="#A2734C">28</font> },
+      { _id: <font color="#26A269">&apos;DE&apos;</font>, totalOffices: <font color="#A2734C">27</font> },
+      { _id: <font color="#26A269">&apos;KY&apos;</font>, totalOffices: <font color="#A2734C">27</font> },
+      { _id: <font color="#26A269">&apos;AL&apos;</font>, totalOffices: <font color="#A2734C">26</font> },
+      { _id: <font color="#26A269">&apos;KS&apos;</font>, totalOffices: <font color="#A2734C">24</font> },
+      { _id: <font color="#26A269">&apos;OK&apos;</font>, totalOffices: <font color="#A2734C">20</font> },
+      { _id: <font color="#26A269">&apos;IA&apos;</font>, totalOffices: <font color="#A2734C">18</font> },
+      { _id: <font color="#26A269">&apos;VT&apos;</font>, totalOffices: <font color="#A2734C">18</font> },
+      { _id: <font color="#26A269">&apos;NM&apos;</font>, totalOffices: <font color="#A2734C">18</font> },
+      { _id: <font color="#26A269">&apos;ME&apos;</font>, totalOffices: <font color="#A2734C">17</font> },
+      { _id: <font color="#26A269">&apos;ID&apos;</font>, totalOffices: <font color="#A2734C">16</font> },
+      { _id: <font color="#26A269">&apos;RI&apos;</font>, totalOffices: <font color="#A2734C">13</font> },
+      { _id: <font color="#26A269">&apos;HI&apos;</font>, totalOffices: <font color="#A2734C">13</font> },
+      { _id: <font color="#26A269">&apos;AR&apos;</font>, totalOffices: <font color="#A2734C">12</font> },
+      { _id: <font color="#26A269">&apos;LA&apos;</font>, totalOffices: <font color="#A2734C">10</font> },
+      { _id: <font color="#26A269">&apos;MT&apos;</font>, totalOffices: <font color="#A2734C">7</font> },
+      { _id: <font color="#26A269">&apos;WY&apos;</font>, totalOffices: <font color="#A2734C">4</font> },
+      { _id: <font color="#26A269">&apos;MS&apos;</font>, totalOffices: <font color="#A2734C">3</font> },
+      { _id: <font color="#26A269">&apos;ND&apos;</font>, totalOffices: <font color="#A2734C">3</font> },
+      { _id: <font color="#26A269">&apos;WV&apos;</font>, totalOffices: <font color="#A2734C">3</font> },
+      { _id: <font color="#26A269">&apos;SD&apos;</font>, totalOffices: <font color="#A2734C">1</font> }
+    ]
+    companies&gt; 
+    
+    companies&gt; 
+    
+    companies&gt; 
+    </pre>
+
+<!-- 
+<pre>(base) <font color="#26A269"><b>ryanhatch_snhu@nv-snhu8-l01</b></font>:<font color="#12488B"><b>~</b></font>$ mongosh
+    Current Mongosh Log ID:	66c5a00ed1ca0085acd7e08f
+    Connecting to:		<font color="#26A269"><b>mongodb://&lt;credentials&gt;@nv-desktop-services.apporto.com:31692/?directConnection=true&amp;appName=mongosh+1.8.0</b></font>
+    Using MongoDB:		6.0.13
+    <font color="#A2734C"><b>Using Mongosh</b></font>:		1.8.0
+    
+    For mongosh info see: <b>https://docs.mongodb.com/mongodb-shell/</b>
+    
+    <font color="#A2734C"><b>------</b></font>
+       <font color="#A2734C"><b>The server generated these startup warnings when booting</b></font>
+       2024-08-21T07:47:21.773+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+       2024-08-21T07:47:23.902+00:00: Failed to read /sys/kernel/mm/transparent_hugepage/defrag
+       2024-08-21T07:47:23.902+00:00: vm.max_map_count is too low
+    <font color="#A2734C"><b>------</b></font>
+    
+    test&gt; show dbs
+    <b>AAC</b>          5.54 MiB
+    <b>admin</b>      148.00 KiB
+    <b>city</b>        10.50 MiB
+    <b>companies</b>   31.11 MiB
+    <b>config</b>     108.00 KiB
+    <b>enron</b>        7.55 MiB
+    <b>local</b>       88.00 KiB
+    <b>test</b>        16.00 KiB
+    test&gt; use companies
+    switched to db companies
+    companies&gt; db.research.find({<font color="#26A269">&quot;name&quot;</font> : <font color="#26A269">&quot;AdventNet&quot;</font>})
+    [
+      {
+        _id: ObjectId(&quot;52cdef7c4bab8bd675297d8b&quot;),
+        name: <font color="#26A269">&apos;AdventNet&apos;</font>,
+        permalink: <font color="#26A269">&apos;abc3&apos;</font>,
+        crunchbase_url: <font color="#26A269">&apos;http://www.crunchbase.com/company/adventnet&apos;</font>,
+        homepage_url: <font color="#26A269">&apos;http://adventnet.com&apos;</font>,
+        blog_url: <font color="#26A269">&apos;&apos;</font>,
+        blog_feed_url: <font color="#26A269">&apos;&apos;</font>,
+        twitter_username: <font color="#26A269">&apos;manageengine&apos;</font>,
+        category_code: <font color="#26A269">&apos;enterprise&apos;</font>,
+        number_of_employees: <font color="#A2734C">600</font>,
+        founded_year: <font color="#A2734C">1996</font>,
+        deadpooled_year: <font color="#A2734C">2</font>,
+        tag_list: <font color="#26A269">&apos;&apos;</font>,
+        alias_list: <font color="#26A269">&apos;Zoho ManageEngine &apos;</font>,
+        email_address: <font color="#26A269">&apos;pr@adventnet.com&apos;</font>,
+        phone_number: <font color="#26A269">&apos;925-924-9500&apos;</font>,
+        description: <font color="#26A269">&apos;Server Management Software&apos;</font>,
+        created_at: ISODate(&quot;2007-05-25T19:24:22.000Z&quot;),
+        updated_at: <font color="#26A269">&apos;Wed Oct 31 18:26:09 UTC 2012&apos;</font>,
+        overview: <font color="#26A269">&apos;&lt;p&gt;AdventNet is now &lt;a href=&quot;/company/zoho-manageengine&quot; title=&quot;Zoho ManageEngine&quot; rel=&quot;nofollow&quot;&gt;Zoho ManageEngine&lt;/a&gt;.&lt;/p&gt;\n&apos;</font> +
+          <font color="#26A269">&apos;\n&apos;</font> +
+          <font color="#26A269">&apos;&lt;p&gt;Founded in 1996, AdventNet has served a diverse range of enterprise IT, networking and telecom customers.&lt;/p&gt;\n&apos;</font> +
+          <font color="#26A269">&apos;\n&apos;</font> +
+          <font color="#26A269">&apos;&lt;p&gt;AdventNet supplies server and network management software.&lt;/p&gt;&apos;</font>,
+        image: {
+          available_sizes: [
+            [
+              [ <font color="#A2734C">150</font>, <font color="#A2734C">55</font> ],
+              <font color="#26A269">&apos;assets/images/resized/0001/9732/19732v1-max-150x150.png&apos;</font>
+            ],
+            [
+              [ <font color="#A2734C">150</font>, <font color="#A2734C">55</font> ],
+              <font color="#26A269">&apos;assets/images/resized/0001/9732/19732v1-max-250x250.png&apos;</font>
+            ],
+            [
+              [ <font color="#A2734C">150</font>, <font color="#A2734C">55</font> ],
+              <font color="#26A269">&apos;assets/images/resized/0001/9732/19732v1-max-450x450.png&apos;</font>
+            ]
+          ]
+        },
+        products: [],
+        relationships: [
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;CEO and Co-Founder&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Sridhar&apos;</font>,
+              last_name: <font color="#26A269">&apos;Vembu&apos;</font>,
+              permalink: <font color="#26A269">&apos;sridhar-vembu&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;VP of Business Dev&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Neil&apos;</font>,
+              last_name: <font color="#26A269">&apos;Butani&apos;</font>,
+              permalink: <font color="#26A269">&apos;neil-butani&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;Usabiliy Engineer&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Bharath&apos;</font>,
+              last_name: <font color="#26A269">&apos;Balasubramanian&apos;</font>,
+              permalink: <font color="#26A269">&apos;bharath-balasibramanian&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;Director of Engineering&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Rajendran&apos;</font>,
+              last_name: <font color="#26A269">&apos;Dandapani&apos;</font>,
+              permalink: <font color="#26A269">&apos;rajendran-dandapani&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;Market Analyst&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Aravind&apos;</font>,
+              last_name: <font color="#26A269">&apos;Natarajan&apos;</font>,
+              permalink: <font color="#26A269">&apos;aravind-natarajan&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;Director of Product Management&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Hyther&apos;</font>,
+              last_name: <font color="#26A269">&apos;Nizam&apos;</font>,
+              permalink: <font color="#26A269">&apos;hyther-nizam&apos;</font>
+            }
+          },
+          {
+            is_past: <font color="#A2734C">true</font>,
+            title: <font color="#26A269">&apos;Western Regional OEM Sales Manager&apos;</font>,
+            person: {
+              first_name: <font color="#26A269">&apos;Ian&apos;</font>,
+              last_name: <font color="#26A269">&apos;Wenig&apos;</font>,
+              permalink: <font color="#26A269">&apos;ian-wenig&apos;</font>
+            }
+          }
+        ],
+        competitions: [],
+        providerships: [
+          {
+            title: <font color="#26A269">&apos;DHFH&apos;</font>,
+            is_past: <font color="#A2734C">true</font>,
+            provider: { name: <font color="#26A269">&apos;A Small Orange&apos;</font>, permalink: <font color="#26A269">&apos;a-small-orange&apos;</font> }
+          }
+        ],
+        total_money_raised: <font color="#26A269">&apos;$0&apos;</font>,
+        funding_rounds: [],
+        investments: [],
+        acquisition: <b>null</b>,
+        acquisitions: [],
+        offices: [
+          {
+            description: <font color="#26A269">&apos;Headquarters&apos;</font>,
+            address1: <font color="#26A269">&apos;4900 Hopyard Rd.&apos;</font>,
+            address2: <font color="#26A269">&apos;Suite 310&apos;</font>,
+            zip_code: <font color="#26A269">&apos;94588&apos;</font>,
+            city: <font color="#26A269">&apos;Pleasanton&apos;</font>,
+            state_code: <font color="#26A269">&apos;CA&apos;</font>,
+            country_code: <font color="#26A269">&apos;USA&apos;</font>,
+            latitude: <font color="#A2734C">37.692934</font>,
+            longitude: <font color="#A2734C">-121.904945</font>
+          }
+        ],
+        milestones: [],
+        video_embeds: [],
+        screenshots: [
+          {
+            available_sizes: [
+              [
+                [ <font color="#A2734C">150</font>, <font color="#A2734C">94</font> ],
+                <font color="#26A269">&apos;assets/images/resized/0004/3400/43400v1-max-150x150.png&apos;</font>
+              ],
+              [
+                [ <font color="#A2734C">250</font>, <font color="#A2734C">156</font> ],
+                <font color="#26A269">&apos;assets/images/resized/0004/3400/43400v1-max-250x250.png&apos;</font>
+              ],
+              [
+                [ <font color="#A2734C">450</font>, <font color="#A2734C">282</font> ],
+                <font color="#26A269">&apos;assets/images/resized/0004/3400/43400v1-max-450x450.png&apos;</font>
+              ]
+            ],
+            attribution: <b>null</b>
+          }
+        ],
+        external_links: [],
+        partners: []
+      }
+    ]
+    companies&gt; db.research.find({<font color="#26A269">&quot;founded_year&quot;</font> : <font color="#A2734C">1996</font>}, {<font color="#26A269">&quot;name&quot;</font> : <font color="#A2734C">1</font>}).limit(<font color="#A2734C">10</font>)
+    [
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675297d8b&quot;), name: <font color="#26A269">&apos;AdventNet&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675297e24&quot;), name: <font color="#26A269">&apos;RegOnline&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675297e42&quot;), name: <font color="#26A269">&apos;LiveWorld&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675297f26&quot;), name: <font color="#26A269">&apos;Shopzilla&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675297fca&quot;), name: <font color="#26A269">&apos;LinkShare&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675298032&quot;), name: <font color="#26A269">&apos;MSNBC&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd6752980cf&quot;), name: <font color="#26A269">&apos;TheStreet&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd6752980d0&quot;), name: <font color="#26A269">&apos;Omniture&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd6752980df&quot;), name: <font color="#26A269">&apos;Blucora&apos;</font> },
+      { _id: ObjectId(&quot;52cdef7c4bab8bd675298223&quot;), name: <font color="#26A269">&apos;Alexa&apos;</font> }
+    ]
+    companies&gt; 
+    </pre>
+    <pre>companies&gt; db.research.find({<font color="#26A269">&quot;founded_year&quot;</font>: {<font color="#A2734C">$gt</font>: <font color="#A2734C">2010</font>}}, {<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>}).sort({<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>}).limit(<font color="#A2734C">20</font>)
+        [
+          { name: <font color="#26A269">&apos;4shared&apos;</font> },
+          { name: <font color="#26A269">&apos;Advaliant&apos;</font> },
+          { name: <font color="#26A269">&apos;Advisor&apos;</font> },
+          { name: <font color="#26A269">&apos;Baveo&apos;</font> },
+          { name: <font color="#26A269">&apos;Bling Easy&apos;</font> },
+          { name: <font color="#26A269">&apos;Carfeine&apos;</font> },
+          { name: <font color="#26A269">&apos;CircleUp&apos;</font> },
+          { name: <font color="#26A269">&apos;Clowdy&apos;</font> },
+          { name: <font color="#26A269">&apos;CompareChecker&apos;</font> },
+          { name: <font color="#26A269">&apos;Cyphercor&apos;</font> },
+          { name: <font color="#26A269">&apos;DocASAP&apos;</font> },
+          { name: <font color="#26A269">&apos;Easel&apos;</font> },
+          { name: <font color="#26A269">&apos;EasyBib&apos;</font> },
+          { name: <font color="#26A269">&apos;Emotive Communications&apos;</font> },
+          { name: <font color="#26A269">&apos;FAT Media&apos;</font> },
+          { name: <font color="#26A269">&apos;FamilyDen&apos;</font> },
+          { name: <font color="#26A269">&apos;FirstString&apos;</font> },
+          { name: <font color="#26A269">&apos;Fixya&apos;</font> },
+          { name: <font color="#26A269">&apos;Fliggo&apos;</font> },
+          { name: <font color="#26A269">&apos;Fluc&apos;</font> }
+        ]
+        Type &quot;it&quot; for more
+        companies&gt; db.research.find({<font color="#26A269">&quot;offices.state&quot;</font>: {<font color="#A2734C">$in</font>: [<font color="#26A269">&quot;California&quot;</font>, <font color="#26A269">&quot;Texas&quot;</font>]}}, {<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>})
+        
+        companies&gt;   .sort({<font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">-1</font>})
+        Invalid REPL keyword
+        companies&gt; db.research.find({<font color="#26A269">&quot;offices.state&quot;</font>: {<font color="#A2734C">$in</font>: [<font color="#26A269">&quot;California&quot;</font>, <font color="#26A269">&quot;Texas&quot;</font>]}}, {<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>}).sort({<font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">-1</font>}).limit(<font color="#A2734C">20</font>)
+        
+        companies&gt; db.research.find({<font color="#26A269">&quot;offices.state&quot;</font>: {<font color="#A2734C">$in</font>: [<font color="#26A269">&quot;California&quot;</font>, <font color="#26A269">&quot;Texas&quot;</font>]}}, {<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>}).sort({<font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">-1</font>}).limit(<font color="#A2734C">20</font>)
+        
+        companies&gt; db.research.find({<font color="#26A269">&quot;offices.state&quot;</font>: {<font color="#A2734C">$in</font>: [<font color="#26A269">&quot;California&quot;</font>, <font color="#26A269">&quot;Texas&quot;</font>]}}, {<font color="#26A269">&quot;offices.state&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>}).limit(<font color="#A2734C">5</font>)
+        
+        companies&gt; db.research.find({<font color="#26A269">&quot;offices.state_code&quot;</font>: {<font color="#A2734C">$in</font>: [<font color="#26A269">&quot;CA&quot;</font>, <font color="#26A269">&quot;TX&quot;</font>]}}, {<font color="#26A269">&quot;name&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">1</font>, <font color="#26A269">&quot;_id&quot;</font>: <font color="#A2734C">0</font>}).sort({<font color="#26A269">&quot;number_of_employees&quot;</font>: <font color="#A2734C">-1</font>}).limit(<font color="#A2734C">20</font>)
+        [
+          { name: <font color="#26A269">&apos;PayPal&apos;</font>, number_of_employees: <font color="#A2734C">300000</font> },
+          { name: <font color="#26A269">&apos;Samsung Electronics&apos;</font>, number_of_employees: <font color="#A2734C">221726</font> },
+          { name: <font color="#26A269">&apos;Accenture&apos;</font>, number_of_employees: <font color="#A2734C">205000</font> },
+          { name: <font color="#26A269">&apos;Flextronics International&apos;</font>, number_of_employees: <font color="#A2734C">200000</font> },
+          { name: <font color="#26A269">&apos;Safeway&apos;</font>, number_of_employees: <font color="#A2734C">186000</font> },
+          { name: <font color="#26A269">&apos;Sony&apos;</font>, number_of_employees: <font color="#A2734C">180500</font> },
+          { name: <font color="#26A269">&apos;Intel&apos;</font>, number_of_employees: <font color="#A2734C">86300</font> },
+          { name: <font color="#26A269">&apos;Apple&apos;</font>, number_of_employees: <font color="#A2734C">80000</font> },
+          { name: <font color="#26A269">&apos;Dell&apos;</font>, number_of_employees: <font color="#A2734C">80000</font> },
+          { name: <font color="#26A269">&apos;ExxonMobil&apos;</font>, number_of_employees: <font color="#A2734C">76900</font> },
+          { name: <font color="#26A269">&apos;Affiliated Computer Services&apos;</font>, number_of_employees: <font color="#A2734C">74000</font> },
+          { name: <font color="#26A269">&apos;Cisco&apos;</font>, number_of_employees: <font color="#A2734C">63000</font> },
+          { name: <font color="#26A269">&apos;Sun Microsystems&apos;</font>, number_of_employees: <font color="#A2734C">33350</font> },
+          { name: <font color="#26A269">&apos;Texas Instruments&apos;</font>, number_of_employees: <font color="#A2734C">30175</font> },
+          { name: <font color="#26A269">&apos;Google&apos;</font>, number_of_employees: <font color="#A2734C">28000</font> },
+          { name: <font color="#26A269">&apos;The Walt Disney Company&apos;</font>, number_of_employees: <font color="#A2734C">25000</font> },
+          { name: <font color="#26A269">&apos;Avaya&apos;</font>, number_of_employees: <font color="#A2734C">18000</font> },
+          { name: <font color="#26A269">&apos;AMD&apos;</font>, number_of_employees: <font color="#A2734C">16420</font> },
+          { name: <font color="#26A269">&apos;Experian&apos;</font>, number_of_employees: <font color="#A2734C">15500</font> },
+          { name: <font color="#26A269">&apos;IQ Backoffice&apos;</font>, number_of_employees: <font color="#A2734C">15000</font> }
+        ]
+        Type &quot;it&quot; for more
+        companies&gt; 
+        
+        </pre> -->

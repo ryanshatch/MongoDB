@@ -1,0 +1,34 @@
+<hr>
+<h2 align="center">Terminal:</h2>
+
+<!-- Step 1. Use the mongoimport tool to create the companies database by loading documents from the companies.json file into the research collection. -->
+<p><strong>Step 1. Use the mongoimport tool to create the companies database by loading documents from the companies.json file into the research collection.</strong></p>
+<!-- <br> -->
+<pre>mongoimport --host nv-desktop-services.apporto.com --port 31692 --username root --password 86FmoAzWpZ --authenticationDatabase admin --db companies --collection research --file /usr/local/datasets/companies.json</pre>
+<!-- <br><br> -->
+<hr>
+<!-- Step 2.1 and 2.2 verify the data loaded correctly -->
+<p><strong>Step 2.1 and 2.2: Verify the data loaded correctly</strong></p>
+<!-- <br> -->
+<pre>db.research.find({"name" : "AdventNet"})
+db.research.find({"founded_year" : 1996}, {"name" : 1}).limit(10)</pre>
+<!-- <br><br> -->
+<hr>
+<!-- Step 3 Retrieve the first 20 companies founded after 2010, ordered alphabetically by name -->
+<p><strong>Step 3: Retrieve the first 20 companies founded after 2010, ordered alphabetically by name</strong></p>
+<!-- <br> -->
+<pre>db.research.find({"founded_year": {$gt: 2010}}, {"name": 1, "_id": 0}).sort({"name": 1}).limit(20)</pre>
+<!-- <br><br> -->
+<hr>
+<!-- Step 4. Retrieve the first 20 companies with offices in California or Texas, ordered by the number of employees- from largest to smallest -->
+<p><strong>Step 4: Retrieve the first 20 companies with offices in California or Texas, ordered by the number of employees— from largest to smallest</strong></p>
+<!-- <br> -->
+<pre>db.research.find({"offices.state_code": {$in: ["CA", "TX"]}}, {"name": 1, "number_of_employees": 1, "_id": 0}).sort({"number_of_employees": -1}).limit(20)</pre>
+<!-- <br><br> -->
+<hr>
+<!-- Step 5. Design an aggregation pipeline to show the total number of offices by state for all companies with offices in the United States. -->
+<p><strong>Step 5: Design an aggregation pipeline to show the total number of offices by state for all companies with offices in the United States.</strong></p>
+<!-- <br> -->
+<pre>db.research.aggregate([{ $unwind: "$offices" }, { $match: { "offices.country": "United States" } }, { $group: { _id: "$offices.state", totalOffices: { $sum: 1 } } }, { $sort: { totalOffices: -1 } }])</pre>
+<!-- <br><br> -->
+<hr>
